@@ -1,0 +1,10 @@
+name: Deploy react app to github pages
+on: [push, pull_request]
+jobs:
+  deploy: # job name is "deploy"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Deploy our code
+        uses: tanwanimohit/deploy-react-to-ghpages@v1.0.1
